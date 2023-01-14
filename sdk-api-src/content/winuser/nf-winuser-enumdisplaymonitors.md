@@ -59,13 +59,13 @@ The <b>EnumDisplayMonitors</b> function enumerates display monitors (including i
 
 ## -parameters
 
-### -param hdc [in]
+### -param hdc [in, optional]
 
 A handle to a display device context that defines the visible region of interest.
 
 If this parameter is <b>NULL</b>, the <i>hdcMonitor</i> parameter passed to the callback function will be <b>NULL</b>, and the visible region of interest is the virtual screen that encompasses all the displays on the desktop.
 
-### -param lprcClip [in]
+### -param lprcClip [in, optional]
 
 A pointer to a <a href="/windows/desktop/api/windef/ns-windef-rect">RECT</a> structure that specifies a clipping rectangle. The region of interest is the intersection of the clipping rectangle with the visible region specified by <i>hdc</i>.
 
@@ -77,7 +77,7 @@ This parameter can be <b>NULL</b> if you don't want to clip the region specified
 
 A pointer to a <a href="/windows/desktop/api/winuser/nc-winuser-monitorenumproc">MonitorEnumProc</a> application-defined callback function.
 
-### -param dwData [in]
+### -param dwData [in, optional]
 
 Application-defined data that <b>EnumDisplayMonitors</b> passes directly to the <a href="/windows/desktop/api/winuser/nc-winuser-monitorenumproc">MonitorEnumProc</a> function.
 
